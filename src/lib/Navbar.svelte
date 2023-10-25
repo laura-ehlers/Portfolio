@@ -1,15 +1,15 @@
 <script>
-    const links = ['Home', 'About Me', 'Portfolio', 'Contact'];
+    const links = [{text: 'Home', slug: '/'}, {text: 'About Me', slug: '/about'},{text: 'Portfolio', slug: '/#portfolio'}, {text: 'Contact', slug: '/#contact'}];
 </script>
 
 <main class="p-3">
-    <nav class="navbar bg-primary text-primary-content rounded-3xl ">
+    <nav class="navbar text-primary-content rounded-3xl ">
         <div class="flex-1">
-            <p class="btn btn-ghost normal-case text-xl">Laura Ehlers</p>
+            <p class="btn normal-case text-xl">Laura Ehlers</p>
         </div>
         <div class="flex-none">
             {#each links as link}
-                <li class="menu menu-horizontal px-1">{link}</li>
+                <a href="{link.slug}" class="btn btn-ghost menu menu-horizontal text-xl">{link.text}</a>
             {/each}
         </div>
     </nav>

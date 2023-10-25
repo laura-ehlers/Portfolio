@@ -1,5 +1,5 @@
 <script>
     import Hero from '../lib/Hero.svelte';
 </script>
-<h1>Home</h1>
+<h1>About</h1>
 <Hero />
